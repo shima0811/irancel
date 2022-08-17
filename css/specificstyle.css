@@ -22,7 +22,7 @@
     width: 100%;
   }
   header .logo {
-    height: 5.6rem;
+    height: 100%;
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
@@ -357,7 +357,7 @@
   }
 }
 
-@media screen and (min-device-width: 421px) and (max-device-width: 768px) {
+@media screen and (min-device-width: 481px) {
   :root {
     font-size: 10px;
   }
@@ -367,15 +367,9 @@
     width: 100%;
   }
   header .logo {
-    height: 5.6rem;
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
-  }
-  header .logo > img {
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
   header .menu {
     -webkit-box-ordinal-group: 3;
@@ -529,7 +523,10 @@
     line-height: 1;
   }
   .quick-link {
-    padding: 0 2rem;
+    padding: 1rem 2rem !important;
+  }
+  .quick-link a {
+    font-size: 1rem;
   }
   .digital-product .slider2-container .buttom img {
     width: 100%;
@@ -664,6 +661,12 @@
   .bottom-footer > .contact > a {
     width: 100%;
     font-size: 2rem;
+  }
+}
+
+@media screen and (min-device-width: 481px) {
+  :root {
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=specificstyle.css.map */

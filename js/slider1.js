@@ -1,5 +1,6 @@
 let slider= document.getElementById("slider")
 let slides= slider.querySelectorAll(".slide")
+console.log(slides)
 let slider_num = slides.length 
 let nextbtn= document.querySelector(".slider1-container>.arrow>#arrow-l")
 
@@ -7,7 +8,16 @@ let prebtn= document.querySelector(".slider1-container>.arrow>#arrow-r")
 
 let dots= document.querySelector(".slider-nav")
 let _slidewidth= slides[0].getBoundingClientRect().width
-let count= slider_num
+window.addEventListener("resize",()=>{
+    _slidewidth= slides[0].getBoundingClientRect().width
+    console.log(_slidewidth)
+     _move = 0
+     _go =1
+    _pre =0
+     let _curentslide =document.querySelector(".curent-slide")
+     _curentslide.classList.remove("curent-slide")
+     slides[0].classList.add("curent-slide")
+})
 
 
 slides.forEach((slides , index) =>{
@@ -29,6 +39,7 @@ function onlineslider(){
 let _curentslide =document.querySelector(".curent-slide")
 let _curentslidenumber = _curentslide.getAttribute("data-number")
 if(_curentslidenumber != slider_num && _go==1){
+    console.log("next")
     gonext()
 }
 if(_curentslidenumber == slider_num && _go==1 ){
@@ -37,6 +48,7 @@ if(_curentslidenumber == slider_num && _go==1 ){
     _pre=1
 }
 if(_curentslidenumber>1 && _pre==1){
+    console.log("pre")
     gopre()
 }
 if(_curentslidenumber==1 && _pre==1){
