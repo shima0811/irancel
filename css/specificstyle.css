@@ -357,7 +357,7 @@
   }
 }
 
-@media screen and (min-device-width: 481px) {
+@media screen and (min-width: 481px) and (max-width: 1020px) {
   :root {
     font-size: 10px;
   }
@@ -661,12 +661,6 @@
   .bottom-footer > .contact > a {
     width: 100%;
     font-size: 2rem;
-  }
-}
-
-@media screen and (min-device-width: 481px) {
-  :root {
-    font-size: 16px;
   }
 }
 /*# sourceMappingURL=specificstyle.css.map */

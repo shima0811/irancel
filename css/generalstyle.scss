@@ -158,6 +158,7 @@ header {
         background-color: var(--yellow);
         @extend .flex;
         height: inherit;
+        order: 1;
         >img{
             object-fit: contain;
             width: 100%;
@@ -175,8 +176,9 @@ header {
         align-content: center;
         border-top-left-radius: 3rem;
         border-bottom-left-radius: 3rem;
-
+        order: 2;
         .desk-menu {
+            order: 2;
             position: relative;
             height: 5.6rem;
             direction: rtl;
@@ -281,6 +283,7 @@ header {
         }
 
         >.search {
+            order:3;
             height: 100%;
             display: flex;
             justify-content: flex-end;
@@ -295,6 +298,7 @@ header {
     }
 
     .gen {
+        order: 4;
         font-size: 2rem;
         display: flex;
         flex-wrap: wrap;
